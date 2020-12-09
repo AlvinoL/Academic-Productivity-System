@@ -4,16 +4,18 @@ public class Publicacao{
     private int anoPublicacao;
     private Projeto projeto;
     // lista de colaboradores autores
+    private ListaColaboradores autores;
 
 
-    public Publicacao(String titulo, String nomeConferencia, int anoPublicacao, Projeto projeto) {
+    public Publicacao(String titulo, String nomeConferencia, int anoPublicacao, Projeto projeto, ListaColaboradores autores) {
         this.titulo = titulo;
         this.nomeConferencia = nomeConferencia;
         this.anoPublicacao = anoPublicacao;
         this.projeto = projeto;
+        this.autores = autores;
     }
 
-//metodos
+    //metodos
     //gets()
     public String getTitulo() {
         return titulo;
@@ -29,6 +31,10 @@ public class Publicacao{
 
     public Projeto getProjeto() {
         return projeto;
+    }
+
+    public ListaColaboradores getAutores() {
+        return autores;
     }
 
     //sets()
@@ -49,6 +55,10 @@ public class Publicacao{
         this.projeto = projeto;
     }
 
+    public void setAutores(ListaColaboradores autores) {
+        this.autores = autores;
+    }
+
     @Override
     public String toString() {
         return "Publicacao{" +
@@ -56,6 +66,7 @@ public class Publicacao{
                 ", nomeConferencia='" + nomeConferencia + '\'' +
                 ", anoPublicacao=" + anoPublicacao +
                 ", projeto=" + projeto +
+                ", autores=" + autores +
                 '}';
     }
 }

@@ -6,14 +6,13 @@ public class Projeto {
     private double valorFinanciado;
     private String objetivo;
     private String descricao;
-    //private <vetor-Colaboradores> participantes;
-    //private <vetor-Orientacao> orientacaoProjeto;
-    //private <vetor-Publicacao> publicacaoProjeto;
     private Professor professorResponsavel;
     private int status = 0;     //"Em Elaboração": 0;     "Em Andamento": 1;    "Concluído": 2;
+    private ListaColaboradores participantes;
+    private ProducaoAcademica projProdAcad;
 
 //Construtor
-    public Projeto(String titulo, String inicioData, String terminoData, String agFinanciadora, double valorFinanciado, String objetivo, String descricao, Professor professorResponsavel) {
+    public Projeto(String titulo, String inicioData, String terminoData, String agFinanciadora, double valorFinanciado, String objetivo, String descricao, Professor professorResponsavel, ListaColaboradores participantes, ProducaoAcademica projProdAcad) {
         this.titulo = titulo;
         this.inicioData = inicioData;
         this.terminoData = terminoData;
@@ -22,9 +21,11 @@ public class Projeto {
         this.objetivo = objetivo;
         this.descricao = descricao;
         this.professorResponsavel = professorResponsavel;
+        this.participantes = participantes;
+        this.projProdAcad = projProdAcad;
     }
 
-//metodos
+    //metodos
     //gets()
     public String getTitulo() {
         return titulo;
@@ -60,6 +61,14 @@ public class Projeto {
 
     public int getStatus() {
         return status;
+    }
+
+    public ListaColaboradores getParticipantes() {
+        return participantes;
+    }
+
+    public ProducaoAcademica getProjProdAcad() {
+        return projProdAcad;
     }
 
     //sets()
@@ -100,6 +109,14 @@ public class Projeto {
         this.status = status;
     }
 
+    public void setParticipantes(ListaColaboradores participantes) {
+        this.participantes = participantes;
+    }
+
+    public void setProjProdAcad(ProducaoAcademica projProdAcad) {
+        this.projProdAcad = projProdAcad;
+    }
+
     @Override
     public String toString() {
         return "Projeto{" +
@@ -112,6 +129,8 @@ public class Projeto {
                 ", descricao='" + descricao + '\'' +
                 ", professorResponsavel=" + professorResponsavel +
                 ", status=" + status +
+                ", participantes=" + participantes +
+                ", projProdAcad=" + projProdAcad +
                 '}';
     }
 }

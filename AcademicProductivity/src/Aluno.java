@@ -1,12 +1,13 @@
 public class Aluno extends Colaboradores{
-    private int typeAluno = 0; // Graduação: 0;     Mestrado: 1;    Doutorado: 2;
-    private int idAluno = 123;
+    private int typeAluno; // Graduação: 0;     Mestrado: 1;    Doutorado: 2;
+//    private int idAluno = 123;
     private boolean busy = false;
     //private <vetor-Orientacoes> listaOrientacoes;
     //private <vetor-Publicacoes> listaPublicacoes;
 
-    Aluno(String nome, String email) {
-        super(nome, email);
+    Aluno(String nome, String email, Projeto colabProject, int typeAluno) {
+        super(nome, email, colabProject);
+        this.typeAluno = typeAluno;
     }
 
 //metodos
@@ -16,9 +17,9 @@ public class Aluno extends Colaboradores{
         return typeAluno;
     }
 
-    public int getIdAluno() {
-        return idAluno;
-    }
+//    public int getIdAluno() {
+//        return idAluno;
+//    }
 
     public boolean getBusy(){
         return busy;
@@ -29,9 +30,9 @@ public class Aluno extends Colaboradores{
         this.typeAluno = typeAluno;
     }
 
-    public void setIdAluno(int idAluno) {
-        this.idAluno = idAluno;
-    }
+//    public void setIdAluno(int idAluno) {
+//        this.idAluno = idAluno;
+//    }
 
     public void setBusy(boolean busy) {
         this.busy = busy;
@@ -41,10 +42,12 @@ public class Aluno extends Colaboradores{
     public String toString() {
         return "Aluno{" +
                 "typeAluno=" + typeAluno +
-                ", idAluno=" + idAluno +
+//                ", idAluno=" + idAluno +
                 ", busy=" + busy +
                 ", nome='" + nome + '\'' +
                 ", email='" + email + '\'' +
+//                ", colabProdAcad=" + colabProdAcad +
+                ", colabProject=" + colabProject +
                 '}';
     }
 }

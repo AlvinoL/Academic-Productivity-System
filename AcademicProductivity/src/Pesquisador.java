@@ -1,26 +1,26 @@
 public class Pesquisador extends Colaboradores{
-    private int idPesquisador = 456;
-    private String instituicaoExterna = "Samsung";
+//    private int idPesquisador = 456;
+    private String instituicaoExterna = "PixForce";
     //private <vetor-Publicacoes> listaPublicacoes;
 
-    Pesquisador(String nome, String email) {
-        super(nome, email);
+    Pesquisador(String nome, String email, Projeto colabProject) {
+        super(nome, email, colabProject);
     }
 
 //metodos
     //gets
-    public int getIdPesquisador() {
-        return idPesquisador;
-    }
+//    public int getIdPesquisador() {
+//        return idPesquisador;
+//    }
 
     public String getInstituicaoExterna(){
         return instituicaoExterna;
     }
 
     //sets
-    public void setIdPesquisador(int idPesquisador) {
-        this.idPesquisador = idPesquisador;
-    }
+//    public void setIdPesquisador(int idPesquisador) {
+//        this.idPesquisador = idPesquisador;
+//    }
 
     public void setInstituicaoExterna(String instituicaoExterna) {
         this.instituicaoExterna = instituicaoExterna;
@@ -29,10 +29,12 @@ public class Pesquisador extends Colaboradores{
     @Override
     public String toString() {
         return "Pesquisador{" +
-                "idPesquisador=" + idPesquisador +
+//                "idPesquisador=" + idPesquisador +
                 ", instituicaoExterna='" + instituicaoExterna + '\'' +
                 ", nome='" + nome + '\'' +
                 ", email='" + email + '\'' +
+//                ", colabProdAcad=" + colabProdAcad +
+                ", colabProject=" + colabProject +
                 '}';
     }
 }

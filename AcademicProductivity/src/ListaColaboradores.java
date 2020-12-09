@@ -19,6 +19,7 @@ public class ListaColaboradores {
         boolean result = false;
         if(current_colab+1 < listaColaboradores.length){
             current_colab++;
+            my_colab.setId(current_colab);
             listaColaboradores[current_colab] = my_colab;
             result = true;
         }
