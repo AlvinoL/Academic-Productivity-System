@@ -19,6 +19,7 @@ public class ListaProjetos {
         boolean result = false;
         if(current_projeto+1 < listaProjetos.length){
             current_projeto++;
+            my_proj.setId(current_projeto);
             listaProjetos[current_projeto] = my_proj;
             result = true;
         }

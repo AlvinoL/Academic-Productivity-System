@@ -8,8 +8,9 @@ public class Projeto {
     private String descricao;
     private Professor professorResponsavel;
     private int status = 0;     //"Em Elaboração": 0;     "Em Andamento": 1;    "Concluído": 2;
+    protected int id = -1;
     private ListaColaboradores participantes;
-    private ProducaoAcademica projProdAcad;
+    public ProducaoAcademica projProdAcad;
 
 //Construtor
     public Projeto(String titulo, String inicioData, String terminoData, String agFinanciadora, double valorFinanciado, String objetivo, String descricao, Professor professorResponsavel, ListaColaboradores participantes, ProducaoAcademica projProdAcad) {
@@ -63,6 +64,10 @@ public class Projeto {
         return status;
     }
 
+    public int getId() {
+        return id;
+    }
+
     public ListaColaboradores getParticipantes() {
         return participantes;
     }
@@ -109,6 +114,10 @@ public class Projeto {
         this.status = status;
     }
 
+    public void setId(int id) {
+        this.id = id;
+    }
+
     public void setParticipantes(ListaColaboradores participantes) {
         this.participantes = participantes;
     }
@@ -129,6 +138,7 @@ public class Projeto {
                 ", descricao='" + descricao + '\'' +
                 ", professorResponsavel=" + professorResponsavel +
                 ", status=" + status +
+                ", id=" + id +
                 ", participantes=" + participantes +
                 ", projProdAcad=" + projProdAcad +
                 '}';

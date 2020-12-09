@@ -1,10 +1,10 @@
 import java.util.Arrays;
 
 public class ProducaoAcademica {
-    private Orientacao listaOrientacao[];
+    public Orientacao listaOrientacao[];
     int current_orient = -1;
 
-    private Publicacao listaPublicacao[];
+    public Publicacao listaPublicacao[];
     int current_pub = -1;
 
     public ProducaoAcademica(int quant_orient, int quant_pub) {
